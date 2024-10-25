@@ -1,0 +1,27 @@
+{
+  "newPet": {
+    "reqUrl": "https://petstore.swagger.io/v2/pet",
+    "payload": {
+      "id": 0,
+      "category": {
+        "id": 0,
+        "name": "monster"
+      },
+      "name": "my monster",
+      "photoUrls": ["string"],
+      "tags": [
+        {
+          "id": 0,
+          "name": "custom monsters"
+        }
+      ],
+      "status": "available"
+    }
+  },
+  "findAvailablePets": {
+    "reqUrl": "https://petstore.swagger.io/v2/pet/findByStatus?status=available"
+  },
+  "findSoldPets": {
+    "reqUrl": "https://petstore.swagger.io/v2/pet/findByStatus?status=sold"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "deliveryData": [
+    { "Email": "fake@email.com" },
+    { "Last Name": "fake name" },
+    { "Address": "5th avenue" },
+    { "City": "Tel aviv" }
+  ],
+  "paymentData": [
+    { "number": "1" },
+    { "expiry": "12/26" },
+    { "verification_value": "777" },
+    { "name": "fake" }
+  ],
+
+  "invalidDeliveryData": [
+    { "Email": "missingat.com" },
+    { "Last Name": "fake name" },
+    { "Address": "5th avenue" },
+    { "City": "Tel aviv" }
+  ],
+
+  "invalidPaymentData": [
+    { "number": "8" },
+    { "expiry": "12/26" },
+    { "verification_value": "777" },
+    { "name": "fake" }
+  ]
+}

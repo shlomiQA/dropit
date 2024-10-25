@@ -1,21 +1,20 @@
 ## Project Title
 
-shlomi-wecheck-todo-project
+dropit-home-assignment
 
 ## Installations
 
 1. Clone the repo
 2. Navigate to project folder
-3. Download vscode editor
-4. Install deps in terminal as follow:
-   4.1 Download and install from the Node.js website.
-   4.2 Run npm init -y in terminal
-   4.3 Run npm install -D @playwright/test
-   4.4 Run npx playwright install
-   4.5 eslint: Run npm install --save-dev eslint
-   4.6 prettier: Run npm install --save-dev prettier
-   4.7 Dotenv: Run npm install dotenv --save-dev
-   4.8 Cross-env: Run npm install cross-env --save-dev
+3. Download VSCode editor
+4. Extension (optional) -> Install "Playwright Test for VSCode"
+5. Install deps in terminal as follow:
+   5.1 Download and install node from the Node.js website.
+   5.2 Run npm init -y in terminal
+   5.3 Run npm install -D @playwright/test
+   5.4 browsers: Run npx playwright install
+   5.5 eslint: Run npm install --save-dev eslint
+   5.6 prettier: Run npm install --save-dev prettier
 
 ## Testing
 

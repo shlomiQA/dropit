@@ -1,0 +1,305 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\ShlomiS\\Desktop\\dropit\\playwright.config.ts",
+    "rootDir": "C:/Users/ShlomiS/Desktop/dropit/e2e/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-reulsts/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/ShlomiS/Desktop/dropit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/ShlomiS/Desktop/dropit/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ShlomiS/Desktop/dropit/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/ShlomiS/Desktop/dropit/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "./e2e/utils/global-setup.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\apiTests.spec.ts",
+      "file": "api/apiTests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "testing dropit api requests",
+          "file": "api/apiTests.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "create new pet and update successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-25T13:19:31.753Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "57941ab4b3bd0635c46c-026dede29b7ddb2c392e",
+              "file": "api/apiTests.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "verify 4th pet name successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 946,
+                      "error": {
+                        "message": "Error: 4th pet name has changed\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Puff\"\u001b[39m\nReceived: \u001b[31m\"doggie\"\u001b[39m",
+                        "stack": "Error: 4th pet name has changed\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Puff\"\u001b[39m\nReceived: \u001b[31m\"doggie\"\u001b[39m\n    at C:\\Users\\ShlomiS\\Desktop\\dropit\\e2e\\tests\\api\\apiTests.spec.ts:25:63",
+                        "location": {
+                          "file": "C:\\Users\\ShlomiS\\Desktop\\dropit\\e2e\\tests\\api\\apiTests.spec.ts",
+                          "column": 63,
+                          "line": 25
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     expect(res\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mconst\u001b[39m fourthPetName \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m res\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     expect(fourthPetName[\u001b[35m3\u001b[39m]\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39m \u001b[32m'4th pet name has changed'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Puff'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// its not always the 4th - see console.log next line\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     console\u001b[33m.\u001b[39mlog(fourthPetName)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ShlomiS\\Desktop\\dropit\\e2e\\tests\\api\\apiTests.spec.ts",
+                            "column": 63,
+                            "line": 25
+                          },
+                          "message": "Error: 4th pet name has changed\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Puff\"\u001b[39m\nReceived: \u001b[31m\"doggie\"\u001b[39m\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     expect(res\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mconst\u001b[39m fourthPetName \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m res\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     expect(fourthPetName[\u001b[35m3\u001b[39m]\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39m \u001b[32m'4th pet name has changed'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Puff'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// its not always the 4th - see console.log next line\u001b[39m\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     console\u001b[33m.\u001b[39mlog(fourthPetName)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\ShlomiS\\Desktop\\dropit\\e2e\\tests\\api\\apiTests.spec.ts:25:63\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-25T13:19:31.799Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ShlomiS\\Desktop\\dropit\\e2e\\tests\\api\\apiTests.spec.ts",
+                        "column": 63,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "57941ab4b3bd0635c46c-325f49ab279d5b270045",
+              "file": "api/apiTests.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "verify sold status pets successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 761,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-25T13:19:31.832Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "57941ab4b3bd0635c46c-a5d7bc98d64547557303",
+              "file": "api/apiTests.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\functionality.spec.ts",
+      "file": "ui/functionality.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "testing dropit ui scenarios",
+          "file": "ui/functionality.spec.ts",
+          "line": 14,
+          "column": 6,
+          "specs": [
+            {
+              "title": "adding items to cart successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 25327,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-25T13:19:31.901Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1e0b5279dfdd2b9d34cd-dc5b22b5a12730de53de",
+              "file": "ui/functionality.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "failure to place order with invalid details ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 18480,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-10-25T13:19:32.649Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1e0b5279dfdd2b9d34cd-ad7e28716abc4298851d",
+              "file": "ui/functionality.spec.ts",
+              "line": 80,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-10-25T13:19:30.610Z",
+    "duration": 26984.539,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

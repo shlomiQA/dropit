@@ -21,23 +21,27 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['html', { open: 'always' }],
+    ['list'],
+    ['json', { outputFile: 'test-reulsts/test-results.json' }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://drpt-external-dev.myshopify.com/password',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
-  globalSetup: './e2e/utils/global-setup.ts',
+  // globalSetup: './e2e/utils/global-setup.ts',
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], headless: false },
-      dependencies: ['setup'],
+      use: { ...devices['Desktop Chrome'], headless: true },
+      // dependencies: ['setup'],
     },
     {
       name: 'setup',
