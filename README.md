@@ -20,7 +20,7 @@ dropit-home-assignment
 
 1. For headless mode use the following script in terminal: comment playwright.config.ts headless: true or remove it
 2. For ui mode use the following script in terminal: uncomment playwright.config.ts headless: true
-3. To run test with env vars run in terminal: npm run e2e:test
+3. To run all tests in terminal: npm run e2e:test
 
 ## Debugging
 
